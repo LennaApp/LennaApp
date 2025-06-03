@@ -3,314 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenna - Terms of Service</title>
-    <meta name="description" content="Terms of Service for Lenna - A modern mobile application for iOS and Android">
+    <title>Lenna Terms of Service</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .header {
+        h1, h2 {
             text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInUp 0.8s ease-out;
         }
-
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            border-radius: 18px;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .app-icon:hover {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        .app-name {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .app-tagline {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.9);
-            font-weight: 300;
-        }
-
-        .content-card {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-
-        .last-updated {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .disclaimer {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 12px 12px 0;
-            font-style: italic;
-            color: #666;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: #667eea;
-            margin: 2.5rem 0 1.5rem 0;
-            font-weight: 600;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-
         p {
-            margin-bottom: 1.5rem;
-            color: #555;
+            text-indent: 2em;
         }
-
-        ul {
-            margin: 1.5rem 0;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        li {
-            margin-bottom: 1rem;
-            padding: 1rem 1.5rem;
-            background: #f8f9fa;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        li:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-        }
-
-        li::before {
-            content: "✓";
-            position: absolute;
-            left: 0.5rem;
-            top: 1rem;
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 0.2rem 0.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
         .contact-info {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 2rem;
-            border-radius: 16px;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 20px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .last-updated {
             text-align: center;
-            margin-top: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-
-        .contact-info a {
-            color: #feca57;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        .language-switcher {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            background: rgba(255,255,255,0.9);
-            backdrop-filter: blur(10px);
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .language-switcher a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .language-switcher a:hover {
-            color: #764ba2;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            .app-name {
-                font-size: 2rem;
-            }
-
-            .language-switcher {
-                position: static;
-                margin-bottom: 2rem;
-                text-align: center;
-            }
+        .disclaimer {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-left: 4px solid #007bff;
         }
     </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <a href="#" onclick="showChinese()">EN / 中文</a>
+    <h1>Lenna Terms of Service</h1>
+    
+    <div class="last-updated">
+        Last Updated: June 3, 2025
     </div>
-
-    <div class="container">
-        <header class="header">
-            <div class="app-icon">L</div>
-            <h1 class="app-name">Lenna</h1>
-            <p class="app-tagline">Your Creative Digital Companion</p>
-        </header>
-
-        <div class="content-card">
-            <div class="last-updated">
-                <strong>Last Updated:</strong> June 3, 2025
-            </div>
-
-            <div class="disclaimer">
-                This document explains the services provided by Lenna and governs your use of our application. Any future changes to these terms will be reflected in this document.
-            </div>
-
-            <h1>Terms of Service</h1>
-
-            <p>Thank you for choosing Lenna. Your support drives our innovation and helps us create better experiences for all users.</p>
-
-            <h2>Usage Guidelines</h2>
-
-            <ul>
-                <li>You acknowledge and agree that you will not use Lenna for any purposes that violate the laws of any jurisdiction. You are solely responsible for all legal consequences arising from your use of the app.</li>
-                <li>You agree not to upload, share, or process any content that contains illegal material, infringes copyright, violates privacy rights, or is otherwise prohibited by law. Content processing is a personal activity independent of the app itself.</li>
-                <li>You acknowledge that you will not use Lenna to create, distribute, or facilitate access to harmful, offensive, or inappropriate content. Any misuse of the app's features is your sole responsibility.</li>
-                <li>You confirm that all information and materials you provide to Lenna are accurate and that you have not intentionally concealed any illegal content. You bear full responsibility for any consequences arising from false information.</li>
-                <li>You warrant that any content you process through Lenna respects intellectual property rights, including copyrights, trademarks, and patents, and will not be used for unauthorized commercial purposes.</li>
-                <li>We may collect technical and diagnostic information about your use of Lenna to improve our services. This data collection is conducted legally and transparently. We do not sell or share your personal information with third parties.</li>
-            </ul>
-
-            <h2>Pricing & Features</h2>
-
-            <p>Lenna offers both free and premium features. Our core functionality is available at no cost, while <span class="highlight">Lenna Pro</span> provides advanced features and customization options for professional users who require enhanced capabilities.</p>
-
-            <h2>Service Availability</h2>
-
-            <p>When using the same account across multiple devices, please comply with the device limitations specified in the relevant platform's terms of service (Apple App Store, Google Play Store, etc.).</p>
-
-            <p>We reserve the right to address serious violations of these terms, including but not limited to suspension of premium features or account restrictions.</p>
-
-            <h2>Third-Party Services</h2>
-
-            <p>Lenna may integrate with third-party services and APIs to enhance functionality. We do not provide or control the content of these external services. Please review the terms of service for any third-party integrations before using them.</p>
-
-            <h2>Data & Privacy</h2>
-
-            <p>Your privacy is important to us. We process data in accordance with our Privacy Policy and applicable data protection laws. User data is stored securely and is not shared with unauthorized parties.</p>
-
-            <h2>Refunds</h2>
-
-            <p>Refund requests should be directed to the platform where you purchased Lenna (App Store, Google Play, etc.). Developers do not directly process refunds. Please contact the respective platform's support team for assistance.</p>
-
-            <h2>Changes to Terms</h2>
-
-            <p>We may update these Terms of Service periodically. Changes will be posted on this page and become effective immediately upon publication. Continued use of Lenna after changes constitutes acceptance of the new terms.</p>
-
-            <div class="contact-info">
-                <h2 style="color: white; border: none; margin-bottom: 1rem;">Contact Us</h2>
-                <p>If you have questions or concerns about these Terms of Service, please contact us at:</p>
-                <p><a href="mailto:support@lenna.app">support@lenna.app</a></p>
-            </div>
-        </div>
+    
+    <div class="disclaimer">
+        This document explains the services provided by Lenna and governs your use of our application. Any future changes to these terms will be reflected in this document.
     </div>
-
-    <script>
-        function showChinese() {
-            // This would normally link to the Chinese version
-            alert('Chinese version would be loaded here');
-        }
-
-        // Add smooth scrolling animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('li');
-            elements.forEach((el, index) => {
-                el.style.animationDelay = `${0.1 * index}s`;
-                el.style.animation = 'fadeInUp 0.6s ease-out both';
-            });
-        });
-    </script>
+    
+    <p>Thank you for choosing Lenna. Your support drives our innovation and helps us create better experiences for all users.</p>
+    
+    <h2>Usage Guidelines</h2>
+    
+    <p>By using Lenna, you agree to the following terms:</p>
+    
+    <ul>
+        <li>You acknowledge and agree that you will not use Lenna for any purposes that violate the laws of any jurisdiction. You are solely responsible for all legal consequences arising from your use of the app.</li>
+        <li>You agree not to upload, share, or process any content that contains illegal material, infringes copyright, violates privacy rights, or is otherwise prohibited by law. Content processing is a personal activity independent of the app itself.</li>
+        <li>You acknowledge that you will not use Lenna to create, distribute, or facilitate access to harmful, offensive, or inappropriate content. Any misuse of the app's features is your sole responsibility.</li>
+        <li>You confirm that all information and materials you provide to Lenna are accurate and that you have not intentionally concealed any illegal content. You bear full responsibility for any consequences arising from false information.</li>
+        <li>You warrant that any content you process through Lenna respects intellectual property rights, including copyrights, trademarks, and patents, and will not be used for unauthorized commercial purposes.</li>
+        <li>We may collect technical and diagnostic information about your use of Lenna to improve our services. This data collection is conducted legally and transparently. We do not sell or share your personal information with third parties.</li>
+    </ul>
+    
+    <h2>Pricing & Features</h2>
+    
+    <p>Lenna offers both free and premium features. Our core functionality is available at no cost, while Lenna Pro provides advanced features and customization options for professional users who require enhanced capabilities.</p>
+    
+    <h2>Service Availability</h2>
+    
+    <p>When using the same account across multiple devices, please comply with the device limitations specified in the relevant platform's terms of service (Apple App Store, Google Play Store, etc.).</p>
+    
+    <p>We reserve the right to address serious violations of these terms, including but not limited to suspension of premium features or account restrictions.</p>
+    
+    <h2>Third-Party Services</h2>
+    
+    <p>Lenna may integrate with third-party services and APIs to enhance functionality. We do not provide or control the content of these external services. Please review the terms of service for any third-party integrations before using them.</p>
+    
+    <h2>Data & Privacy</h2>
+    
+    <p>Your privacy is important to us. We process data in accordance with our Privacy Policy and applicable data protection laws. User data is stored securely and is not shared with unauthorized parties.</p>
+    
+    <h2>Refunds</h2>
+    
+    <p>Refund requests should be directed to the platform where you purchased Lenna (App Store, Google Play, etc.). Developers do not directly process refunds. Please contact the respective platform's support team for assistance.</p>
+    
+    <h2>Changes to Terms</h2>
+    
+    <p>We may update these Terms of Service periodically. Changes will be posted on this page and become effective immediately upon publication. Continued use of Lenna after changes constitutes acceptance of the new terms.</p>
+    
+    <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> support@lenna.app</p>
+        <p>If you have questions or concerns about these Terms of Service, please contact us at the above email address. Our support team will respond to you as soon as possible.</p>
+    </div>
 </body>
 </html>
