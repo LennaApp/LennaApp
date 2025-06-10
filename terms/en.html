@@ -6,90 +6,243 @@
     <title>Lenna Terms of Service</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             margin: 20px;
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
         }
-        h1, h2 {
+        h1 {
             text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         p {
             text-indent: 2em;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        ul {
-            margin: 20px 0;
-        }
-        li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
         }
         .last-updated {
             text-align: center;
             font-weight: bold;
             margin-bottom: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
         }
         .disclaimer {
             font-style: italic;
             margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            border-radius: 10px;
+            border-left: 4px solid #0984e3;
+            box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);
+        }
+        .disclaimer p {
+            text-indent: 0;
+            margin: 0;
+        }
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-info h2 {
+            margin-top: 0;
+            border-bottom: none;
+            color: #2c3e50;
+        }
+        .contact-info p {
+            text-indent: 0;
+        }
+        ul {
+            margin: 20px 0;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
             padding: 15px;
-            background-color: #f5f5f5;
-            border-left: 4px solid #007bff;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            list-style: none;
+            position: relative;
+            padding-left: 50px;
+            transition: all 0.3s ease;
+        }
+        li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        li::before {
+            content: counter(rule-counter);
+            counter-increment: rule-counter;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        .rules-list {
+            counter-reset: rule-counter;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        .highlight {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight p {
+            text-indent: 0;
+            margin: 0;
+        }
+        .section-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+        }
+        .intro-text p {
+            text-indent: 0;
+            margin: 0;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+        .footer-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
         }
     </style>
 </head>
 <body>
     <div class="last-updated">
-        Last updated<br />
-        Jun 3 2025
+        Last Updated<br />
+        April 15, 2025
     </div>
     
     <div class="disclaimer">
-        This document is intended to explain or clarify the services provided by Lenna, possible subsequent changes to the terms are also subject to this document.
+        <p><strong>Important Notice:</strong> This document is intended to explain or clarify the services provided by Lenna. Any subsequent changes to the terms are also subject to this document.</p>
     </div>
     
     <h1>Terms of Service</h1>
     
-    <p>Thanks for using Lenna, your support directly sustains the development.</p>
+    <div class="intro-text">
+        <p>Thank you for using Lenna. Your support directly sustains our development and helps us continue improving the app.</p>
+    </div>
     
-    <h2>Rules of Use</h2>
+    <div class="section-content">
+        <h2>Rules of Use</h2>
+        
+        <ul class="rules-list">
+            <li>You acknowledge and agree that you will not use any of the services provided by Lenna for any purpose that violates the laws of any country, and that you will be solely responsible for all legal consequences arising therefrom.</li>
+            
+            <li>You acknowledge and agree that you will not add any remote agreements, cloud drives, or media services ("Services") that contain illegal content, infringe copyright, etc. Adding "Services" is a personal action and has nothing to do with the App. Otherwise, any legal risks and consequences arising from it will be fully borne by you.</li>
+            
+            <li>You acknowledge and agree that you will not download or record any video that contains illegal content or infringes copyright, etc. Downloading videos is a personal act and has nothing to do with the App. Otherwise, any legal risks and consequences will be fully borne by you.</li>
+            
+            <li>You acknowledge and agree that you have not submitted any false information or materials to Lenna, nor have you intentionally concealed any illegal content that may exist in the Service you have added. If you do not comply, you will be solely responsible for all consequences arising therefrom.</li>
+            
+            <li>You acknowledge and agree that the Service you have added guarantees that you own complete and independent intellectual property rights, including but not limited to designs, copyrights, text, graphics, logos, button icons, images, audio clips, and will not be used in connection with any unauthorized products or services.</li>
+            
+            <li>You acknowledge and agree that we legally collect and use technical or diagnostic information about you and your use of the Service through the streaming links you add when needed. The information collected will be used to improve our Service content and enhance the quality of our Service. We do not share or sell your information and content to other organizations.</li>
+        </ul>
+    </div>
     
-    <ul>
-        <li>You know and agree that you will not use any of the services provided by Lenna for any purpose that violates the laws of any country, and that you will be solely responsible for all legal consequences arising therefrom.</li>
-        <li>You know and agree that you will not add any remote agreements, cloud drives, media services ("Services") that contain illegal content, infringe copyright, etc. Adding "Services" is a personal action, and has nothing to do with the App, otherwise, any legal risks and consequences arising from it will be fully borne by you.</li>
-        <li>You know and agree that you will not download or record any video that contains illegal content or infringes copyright, etc. Downloading videos is a personal act and has nothing to do with the App, otherwise, any legal risks and consequences will be fully borne by you.</li>
-        <li>You know and agree that you have not submitted any false information or materials to Lenna, nor have you intentionally concealed any illegal content that may exist in the Service you have added. If you do not do so, you will be solely responsible for all consequences arising therefrom.</li>
-        <li>You acknowledge and agree that the Service you have added guarantees that you own complete and independent intellectual property rights, including, but not limited to, designs, copyrights, text, graphics, logos, button icons, images, audio clips, and will not be used in connection with any unauthorized products or services.</li>
-        <li>You know and agree that we legally collect and use technical or diagnostic information about you and your use of the Service by the streaming links you add through technical means when needed, and that the information collected will be used to improve the content of our Service and enhance the quality of our Service. We do not share or sell your information and content to other organizations.</li>
-    </ul>
+    <div class="section-content">
+        <h2>Pricing</h2>
+        <p>Lenna's core features, such as media player and file management, are completely free. We also offer <strong>Lenna Pro</strong> edition, designed to meet the needs of professional users for more customization options while maintaining our development efforts.</p>
+    </div>
     
-    <h2>Pricing</h2>
+    <div class="section-content">
+        <h2>Service Availability</h2>
+        <p>When you use the same Apple ID on multiple devices, please follow the device limitations mentioned in the official <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank">"Apple Media Services Terms and Conditions"</a> document.</p>
+        
+        <p>We reserve the right to address serious violations of these terms, including but not limited to removal of unlocked content.</p>
+    </div>
     
-    <p>Lenna's core features, such as file management, media player, and content editor, are free. We also offer <strong>Lenna Pro</strong> edition, designed to meet the needs of professional users for more customization while maintaining our development efforts.</p>
+    <div class="section-content">
+        <h2>Cloud Service</h2>
+        <p>We do not provide content for cloud services, nor do we provide media streaming services. Cloud services (such as drives, Emby/Jellyfin) are all implemented using their open APIs. Please check their terms before using them.</p>
+    </div>
     
-    <h2>Service Availability</h2>
+    <div class="section-content">
+        <h2>Refund Policy</h2>
+        <p>We are sorry to hear that you want to request a refund. However, developers are not responsible for refunds. You are encouraged to contact the Apple Support Team directly. Some information can be found <a href="https://support.apple.com/en-us/HT204084" target="_blank">here</a>.</p>
+    </div>
     
-    <p>When you use the same Apple ID on multiple devices, please follow the device limitations mentioned in the official <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html">"Apple Media Services Terms and Conditions"</a> file.</p>
-    
-    <p>We reserve the right to address serious violations of these terms, including, but not limited to, removal of unlocked content.</p>
-    
-    <h2>Cloud Service</h2>
-    
-    <p>We do not provide contents of cloud services, we do not provide media streaming service, cloud service(such as drives, emby) all implemented with their open API. Please do check its terms before using them.</p>
-    
-    <h2>Refund</h2>
-    
-    <p>We are sorry to hear that you want to refund. However, developers are not responsible for refunds, you are encouraged to contact Apple Support Team directly, some information could be found <a href="https://support.apple.com/en-us/HT204084">here</a>.</p>
-    
-    <h2>Changes to This Terms of Service</h2>
-    
-    <p>We may update our Terms of Service from time to time. We will notify you of any changes by posting the new Terms of Service on this page. These changes are effective immediately after they are posted on this page.</p>
+    <div class="section-content">
+        <h2>Changes to These Terms of Service</h2>
+        <p>We may update our Terms of Service from time to time. We will notify you of any changes by posting the new Terms of Service on this page. These changes are effective immediately after they are posted on this page.</p>
+        
+        <p>You are advised to review these Terms of Service periodically for any changes. Your continued use of the Service after any modifications indicates your acceptance of the new Terms of Service.</p>
+    </div>
     
     <div class="contact-info">
         <h2>Contact Us</h2>
-        <p>If you have any questions or suggestions about our Terms of Service, please do not hesitate to contact us at <strong>emby@outlook.my</strong> .</p>
+        <p style="text-indent: 0;"><strong>If you have any questions or suggestions about our Terms of Service, please do not hesitate to contact us:</strong></p>
+        <p style="text-indent: 0;"><strong>Email:</strong> emby@outlook.my</p>
+        <p style="text-indent: 0;"><strong>Response Time:</strong> We will respond to your inquiries within 30 days</p>
     </div>
+
+    <hr>
+    <p class="footer-note">This Terms of Service is effective as of the date stated above and applies to all users of the Lenna application.</p>
 </body>
 </html>
