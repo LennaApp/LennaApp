@@ -67,6 +67,7 @@
             font-weight: bold;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             position: relative;
+            overflow: hidden;
         }
 
         .app-icon::after {
@@ -81,6 +82,13 @@
             z-index: -1;
             filter: blur(15px);
             opacity: 0.7;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 22px;
         }
 
         .hero h1 {
@@ -391,7 +399,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="app-icon">L</div>
+            <div class="app-icon">
+                <img src="https://lennaapp.github.io/web/home/icon_512.png" alt="Lenna App Icon">
+            </div>
             <h1>Lenna</h1>
             <p class="tagline">Ultimate Media Player for Home Entertainment</p>
             <p class="subtitle">Designed specifically for movie and TV enthusiasts. Perfectly suited for users who store their media content on a home NAS with powerful Emby/Jellyfin server management.</p>
@@ -493,6 +503,10 @@
         <div class="container">
             <p>&copy; 2025 Lenna Media Player. Available on iOS.</p>
             <p>Questions or feedback? Contact us at <a href="mailto:support@lenna.app">support@lenna.app</a></p>
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <a href="https://lennaapp.github.io/web/privacy-policy/en.html" style="margin-right: 2rem;">Privacy Policy</a>
+                <a href="https://lennaapp.github.io/web/terms/en.html">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
