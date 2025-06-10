@@ -6,31 +6,313 @@
     <title>Lenna Technical Support</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        h1, h2 {
+        
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 40px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        p {
-            text-indent: 2em;
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="10" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="15" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="12" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 6s ease-in-out infinite;
         }
-        .contact-info {
-            margin-top: 20px;
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .support-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .contact-section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .contact-methods {
+            display: grid;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .contact-label {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-value {
+            color: #3498db;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .contact-value a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-value a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .footer-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            font-style: italic;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .contact-section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Lenna Technical Support</h1>
-    <p>Welcome to the Lenna Video Player. We are committed to providing you with the best user experience. If you encounter any issues or have any questions and suggestions while using the app, please contact our technical support team through the following methods:</p>
-    
-    <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> emby@outlook.my</p>
+    <div class="container">
+        <div class="header">
+            <div class="support-icon">🛠️</div>
+            <h1>Technical Support</h1>
+        </div>
+        
+        <div class="content">
+            <p class="intro-text">
+                Welcome to Lenna Video Player! We are committed to providing you with the best user experience. 
+                If you encounter any issues or have questions and suggestions while using the app, 
+                our dedicated technical support team is here to help.
+            </p>
+            
+            <div class="contact-section">
+                <h2>Get Support</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-label">Email Support</div>
+                        <div class="contact-value">
+                            <a href="mailto:emby@outlook.my">emby@outlook.my</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">Quick Response</div>
+                        <div class="feature-desc">We respond within 24-48 hours</div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">Expert Help</div>
+                        <div class="feature-desc">Dedicated technical specialists</div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🌍</div>
+                        <div class="feature-title">Multi-language</div>
+                        <div class="feature-desc">Support in English & Chinese</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-note">
+                Our support team will respond to you as soon as possible. 
+                Thank you for choosing Lenna and for your understanding and support!
+            </div>
+        </div>
     </div>
-    
-    <p>Our support team will respond to you as soon as possible. Thank you for your understanding and support.</p>
 </body>
 </html>
