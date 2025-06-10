@@ -6,90 +6,243 @@
     <title>Lenna 使用条款</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
         }
-        h1, h2 {
+        h1 {
             text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         p {
             text-indent: 2em;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        ul {
-            margin: 20px 0;
-        }
-        li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
         }
         .last-updated {
             text-align: center;
             font-weight: bold;
             margin-bottom: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
         }
         .disclaimer {
             font-style: italic;
             margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            border-radius: 10px;
+            border-left: 4px solid #0984e3;
+            box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);
+        }
+        .disclaimer p {
+            text-indent: 0;
+            margin: 0;
+        }
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-info h2 {
+            margin-top: 0;
+            border-bottom: none;
+            color: #2c3e50;
+        }
+        .contact-info p {
+            text-indent: 0;
+        }
+        ul {
+            margin: 20px 0;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
             padding: 15px;
-            background-color: #f5f5f5;
-            border-left: 4px solid #007bff;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            list-style: none;
+            position: relative;
+            padding-left: 50px;
+            transition: all 0.3s ease;
+        }
+        li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        li::before {
+            content: counter(rule-counter);
+            counter-increment: rule-counter;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        .rules-list {
+            counter-reset: rule-counter;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        .highlight {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight p {
+            text-indent: 0;
+            margin: 0;
+        }
+        .section-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+        }
+        .intro-text p {
+            text-indent: 0;
+            margin: 0;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+        .footer-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
         }
     </style>
 </head>
 <body>
     <div class="last-updated">
         最近更新<br />
-        2025-06-03
+        2025年4月15日
     </div>
     
     <div class="disclaimer">
-        本文件旨在解释或澄清 Lenna 所提供的服务，后续可能的条款变更也以本文件为准。
+        <p><strong>重要声明：</strong> 本文件旨在解释或澄清 Lenna 所提供的服务，后续可能的条款变更也以本文件为准。</p>
     </div>
     
     <h1>使用条款</h1>
     
-    <p>感谢您使用 Lenna，您的支持直接支撑了我们的发展。</p>
+    <div class="intro-text">
+        <p>感谢您使用 Lenna，您的支持直接支撑了我们的发展，帮助我们持续改进应用。</p>
+    </div>
     
-    <h2>使用规则</h2>
+    <div class="section-content">
+        <h2>使用规则</h2>
+        
+        <ul class="rules-list">
+            <li>您知晓并同意，您不会将 Lenna 所提供的任何一项服务用于违反任何国家相关法律的用途，否则，由此而出现的所有法律后果，将由您自行全部承担。</li>
+            
+            <li>您知晓并同意，您不会添加任何含有违法内容、侵犯版权等的远程协议、云盘、媒体服务（以下简称"服务"）。添加"服务"属于个人行为，与本 App 无关，否则，所产生的任何法律风险和后果将由您自行全部承担。</li>
+            
+            <li>您知晓并同意，您不会下载、录制任何含有违法内容、侵犯版权等的视频。下载视频属于个人行为，与本 App 无关，否则，所产生的任何法律风险和后果将由您自行全部承担。</li>
+            
+            <li>您知晓并同意，您没有向 Lenna 提交任何的虚假信息或材料，也没有故意隐瞒您添加的"服务"中可能存在的违法内容。否则，由此出现的所有后果，将由您自行全部承担。</li>
+            
+            <li>您知晓并同意，您所添加的"服务"保证您拥有完整独立的知识产权，包括但不限于外观设计、著作权、文本、图形、徽标、按钮图标、图像、音频剪辑，且不会被用于未经许可的任何有关产品或服务。</li>
+            
+            <li>您知晓并同意，我们在需要时通过技术手段合法收集和使用有关您及您添加的流媒体链接所使用本服务的技术性或诊断性信息，收集到的信息将用于改进我们的服务内容，提升我们的服务品质。我们不会将您的信息和内容分享或出售给其他的组织。</li>
+        </ul>
+    </div>
     
-    <ul>
-        <li>您知晓并同意，您并不会将 Lenna 所提供的任何一项服务用于违反任何国家相关法律的用途，否则，由此而出现的所有法律后果，将由您自行全部承担；</li>
-        <li>您知晓并同意，您不会添加任何含有违法内容、侵犯版权等的远程协议、云盘、媒体服务（以下简称"服务"）。添加"服务"属于个人行为，与本 App 无关，否则，所产生的任何法律风险和后果将由您自行全部承担；</li>
-        <li>您知晓并同意，您不会下载、录制任何含有违法内容、侵犯版权等的视频。下载视频属于个人行为，与本 App 无关，否则，所产生的任何法律风险和后果将由您自行全部承担；</li>
-        <li>您知晓并同意，您没有向 Lenna 提交任何的虚假信息或材料，也没有故意隐瞒您添加的"服务"中可能存在的违法内容。否则，由此出现的所有后果，将由您自行全部承担；</li>
-        <li>您知晓并同意，您所添加的"服务"保证您拥有完整独立的知识产权，包括但不限于外观设计、著作权、文本，图形，徽标，按钮图标，图像，音频剪辑，且不会被用于未经许可的任何有关产品或服务；</li>
-        <li>您知晓并同意，我们在需要时通过技术手段合法收集和使用有关您及您添加的流媒体链接所使用本服务的技术性或诊断性信息，收集到的信息将用于改进我们的服务内容，提升我们的服务品质。我们不会将您的信息和内容分享或出售给其他的组织；</li>
-    </ul>
+    <div class="section-content">
+        <h2>价格</h2>
+        <p>Lenna 的核心功能，如媒体播放器和文件管理都是完全免费的。我们还提供 <strong>Lenna Pro</strong> 版，旨在满足专业用户对更多定制功能的需求，同时保持我们的开发力度。</p>
+    </div>
     
-    <h2>价格</h2>
+    <div class="section-content">
+        <h2>服务可用性</h2>
+        <p>当您在多个设备上使用同一个 Apple ID 时，请遵循官方 <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank">"苹果媒体服务条款和条件"</a> 文件中提到的设备限制。</p>
+        
+        <p>我们保留处理严重违反这些条款的权利，包括但不限于删除解锁的内容。</p>
+    </div>
     
-    <p>Lenna 的核心功能，如文件管理、媒体播放器和内容编辑器，都是免费的。我们还提供 <strong>Lenna Pro</strong> 版，旨在满足专业用户对更多定制功能的需求，同时保持我们的开发力度。</p>
+    <div class="section-content">
+        <h2>云端服务</h2>
+        <p>我们不提供云端服务的内容，也不提供流媒体服务。应用中的云端（远程、多媒体）服务均根据开放接口实现。请务必先阅读相关的服务协议后再使用。</p>
+    </div>
     
-    <h2>服务可用性</h2>
+    <div class="section-content">
+        <h2>退款政策</h2>
+        <p>我们很抱歉听到您想退款。但开发商不负责退款，您可以直接联系苹果支持团队进行退款处理，一些信息可以在 <a href="https://support.apple.com/en-us/HT204084" target="_blank">这里</a> 找到。</p>
+    </div>
     
-    <p>当你在多个设备上使用同一个 Apple ID 时，请遵循官方 <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html">"苹果媒体服务条款和条件"</a> 文件中提到的设备限制。</p>
-    
-    <p>我们保留处理严重违反这些条款的权利，包括但不限于删除解锁的内容。</p>
-    
-    <h2>云端服务</h2>
-    
-    <p>我们不提供云端服务的内容，也不提供流媒体服务，应用中的云端（远程、多媒体）服务均根据开放接口实现。请务必先阅读相关的服务协议后再使用。</p>
-    
-    <h2>退款</h2>
-    
-    <p>我们很抱歉听到你想退款，但开发商不负责退款，你可以直接联系苹果支持团队进行退款处理，一些信息可以在 <a href="https://support.apple.com/en-us/HT204084">这里</a> 找到。</p>
-    
-    <h2>本使用条款的变更</h2>
-    
-    <p>我们可能会不时地更新我们的服务条款。我们将通过在本页面上发布新的服务条款来通知您任何变化。这些变化在本页面上公布后立即生效。</p>
+    <div class="section-content">
+        <h2>本使用条款的变更</h2>
+        <p>我们可能会不时地更新我们的服务条款。我们将通过在本页面上发布新的服务条款来通知您任何变化。这些变化在本页面上公布后立即生效。</p>
+        
+        <p>建议您定期查看这些服务条款以了解任何变化。在任何修改后继续使用服务表示您接受新的服务条款。</p>
+    </div>
     
     <div class="contact-info">
         <h2>联系我们</h2>
-        <p>如果您对我们的服务条款有任何疑问或建议，请随时联系我们，<strong>emby@outlook.my</strong> 。</p>
+        <p style="text-indent: 0;"><strong>如果您对我们的服务条款有任何疑问或建议，请随时联系我们：</strong></p>
+        <p style="text-indent: 0;"><strong>电子邮箱：</strong> emby@outlook.my</p>
+        <p style="text-indent: 0;"><strong>回复时间：</strong> 我们将在30天内回复您的询问</p>
     </div>
+
+    <hr>
+    <p class="footer-note">本使用条款自上述日期起生效，适用于 Lenna 应用的所有用户。</p>
 </body>
 </html>
