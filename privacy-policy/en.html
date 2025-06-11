@@ -25,6 +25,10 @@
       border-bottom: 2px solid #3498db;
       padding-bottom: 5px;
     }
+    h3 {
+      color: #2980b9;
+      margin-top: 20px;
+    }
     p {
       text-indent: 2em;
       margin-bottom: 15px;
@@ -67,14 +71,15 @@
   <p>When you choose to sign in with Google, we access and collect the following information from your Google account:</p>
   <ul>
     <li><strong>Basic Profile Information:</strong> Your name and profile picture</li>
+    <li><strong>Google Drive File Access:</strong> Access to media files in your Google Drive for playback purposes</li>
   </ul>
   
   <h3>1.2 Application Data</h3>
   <p>The App may locally store the following information on your device:</p>
   <ul>
     <li>Media server connection settings (Emby/Jellyfin server URLs and credentials)</li>
-    <li>Playback preferences and settings</li>
-    <li>Watch history and progress (stored locally or synced via iCloud/Trakt.TV)</li>
+    <li>Playback preferences and settings (local storage only)</li>
+    <li>Watch history and progress</li>
   </ul>
 
   <h2>2. How We Use Your Information</h2>
@@ -84,19 +89,37 @@
   <ul>
     <li><strong>Authentication:</strong> To verify your identity and provide secure access to the App</li>
     <li><strong>User Experience:</strong> To personalize your experience by displaying your name and profile picture</li>
+    <li><strong>Media Playback:</strong> To access and play video files from your Google Drive</li>
   </ul>
   
   <h3>2.2 Application Data Usage</h3>
   <p>Your application data is used to:</p>
   <ul>
     <li>Provide media streaming and playback functionality</li>
+    <li>Save and sync your viewing progress and preference settings</li>
   </ul>
 
   <h2>3. How We Store Your Information</h2>
-  <p>Google user data obtained through Google Sign-In is processed securely and is not permanently stored on our servers. Authentication tokens are handled according to Google's security standards.</p>
-  <p>Application data is primarily stored locally on your device, with optional syncing through:</p>
+  
+  <h3>3.1 Local Storage Principle</h3>
+  <p>We do not operate any servers to store your personal data. All application data is stored locally on your device.</p>
+  
+  <h3>3.2 Google Sign-In Data Processing</h3>
+  <p>When you use Google Sign-In:</p>
   <ul>
-    <li>Apple iCloud</li>
+    <li>Authentication occurs directly between your device and Google's servers</li>
+    <li>We only store necessary authentication tokens locally on your device</li>
+    <li>These tokens are used solely to maintain your sign-in status and are not transmitted to any third-party servers</li>
+  </ul>
+  
+  <h3>3.3 iCloud Sync (Optional)</h3>
+  <p>If you choose to enable iCloud sync:</p>
+  <ul>
+    <li>Your watch history, playback progress, and media server connection settings will be synced through Apple iCloud services</li>
+    <li>Playback preferences and settings are stored only locally on your device and will not be synced via iCloud</li>
+    <li>Synced data will be stored on Apple's iCloud servers</li>
+    <li>Data transmission and storage follow Apple's privacy policy and security standards</li>
+    <li>You can disable iCloud sync at any time in your device settings</li>
   </ul>
 
   <h2>4. Information Sharing and Disclosure</h2>
@@ -104,6 +127,7 @@
   <ul>
     <li><strong>With Your Consent:</strong> When you explicitly authorize us to share specific information</li>
     <li><strong>Legal Requirements:</strong> When required by law or to protect our rights and the safety of our users</li>
+    <li><strong>Apple iCloud Service:</strong> When you enable iCloud sync, your app data will be shared with Apple iCloud services, subject to Apple's privacy policy</li>
   </ul>
 
   <h2>5. Google API Services User Data Policy Compliance</h2>
@@ -116,27 +140,62 @@
     <li>Not allowing humans to read Google user data unless we have your affirmative agreement for specific messages</li>
   </ul>
 
-  <h2>6. Data Security</h2>
+  <h2>6. Third-Party Services</h2>
+  <p>The App integrates with the following third-party services:</p>
+  
+  <h3>6.1 Google Sign-In and Google Drive</h3>
+  <ul>
+    <li><strong>Provider:</strong> Google LLC</li>
+    <li><strong>Purpose:</strong> User authentication and accessing media files in Google Drive for playback</li>
+    <li><strong>Data Processing:</strong> Subject to Google's privacy policy</li>
+    <li><strong>Scope of Access:</strong> Read access to files in your Google Drive for media playback purposes</li>
+  </ul>
+  
+  <h3>6.2 Apple iCloud (Optional)</h3>
+  <ul>
+    <li><strong>Provider:</strong> Apple Inc.</li>
+    <li><strong>Purpose:</strong> Cross-device data synchronization</li>
+    <li><strong>Data Processing:</strong> Subject to Apple's privacy policy</li>
+  </ul>
+  
+  <h3>6.3 Media Server Connection</h3>
+  <ul>
+    <li>The App connects to your configured Emby/Jellyfin servers</li>
+    <li>Connection information (server addresses, credentials) is stored locally on your device and can be synced via iCloud</li>
+    <li>We do not participate in data transmission between you and your media servers</li>
+  </ul>
+
+  <h2>7. Data Security</h2>
   <p>We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction. This includes:</p>
   <ul>
     <li>Secure authentication protocols for Google Sign-In</li>
     <li>Encryption of sensitive data in transit and at rest</li>
     <li>Regular security assessments and updates</li>
+    <li>Local data storage reduces the risk of data breaches</li>
   </ul>
 
-  <h2>7. Your Rights and Choices</h2>
+  <h2>8. Your Rights and Choices</h2>
   <p>You have the following rights regarding your information:</p>
   <ul>
-    <li><strong>Access:</strong> You can request access to the information we have about you</li>
-    <li><strong>Correction:</strong> You can request correction of inaccurate information</li>
-    <li><strong>Deletion:</strong> You can request deletion of your account and associated data</li>
+    <li><strong>Access:</strong> You can view app data stored locally on your device at any time</li>
+    <li><strong>Correction:</strong> You can modify your settings and preferences within the app</li>
+    <li><strong>Deletion:</strong> You can completely delete all locally stored data by deleting the app</li>
     <li><strong>Revoke Access:</strong> You can revoke the App's access to your Google account at any time through your Google Account settings</li>
+    <li><strong>Sync Control:</strong> You can enable or disable iCloud sync functionality at any time</li>
   </ul>
 
-  <h2>8. Children's Privacy</h2>
+  <h2>9. Data Retention</h2>
+  <p>Since all data is primarily stored locally on your device:</p>
+  <ul>
+    <li>Playback preferences and settings will remain on your device until you delete the app or manually clear the data</li>
+    <li>Watch history, playback progress, and server connection settings synced via iCloud will be managed according to your iCloud settings and Apple's retention policies</li>
+    <li>Google authentication tokens will be deleted when you sign out</li>
+  </ul>
+
+  <h2>10. Children's Privacy</h2>
   <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information promptly.</p>
 
-  <h2>9. Changes to This Privacy Policy</h2>
+  <h2>11. Changes to This Privacy Policy</h2>
   <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. When we make material changes, we will:</p>
   <ul>
     <li>Update the "Last Updated" date at the top of this policy</li>
@@ -144,10 +203,10 @@
     <li>Provide you with the opportunity to review the changes before they take effect</li>
   </ul>
 
-  <h2>10. International Data Transfers</h2>
-  <p>Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.</p>
+  <h2>12. International Data Transfers</h2>
+  <p>Unless you choose to use iCloud sync functionality, your data does not leave your device. If you enable iCloud sync, your data may be transferred to Apple data centers in other countries as required for Apple iCloud service operations. Such transfers are managed by Apple and subject to their privacy policy.</p>
 
-  <h2>11. Contact Us</h2>
+  <h2>13. Contact Us</h2>
   <div class="contact-info">
     <p style="text-indent: 0;"><strong>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</strong></p>
     <p style="text-indent: 0;"><strong>Email:</strong> emby@outlook.my</p>
